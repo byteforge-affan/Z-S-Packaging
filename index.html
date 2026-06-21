@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ur" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z&S Packages — Carton Box Manufacturing Pakistan</title>
+<meta name="description" content="Z&S Packages — Pakistan's trusted carton box manufacturer. Custom printed boxes, corrugated packaging, bulk orders. Trusted by leading brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Expanded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --kraft: #E8D9C3;
+    --kraft-dark: #D4C2A3;
+    --corrugate: #3D2817;
+    --corrugate-light: #5A3D26;
+    --orange: #D4622A;
+    --orange-dark: #B84E1C;
+    --cream: #FAF6EF;
+    --ink: #2A2420;
+    --ink-soft: #5C5249;
+    --line: rgba(61,40,23,0.15);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    text-transform:uppercase;
+  }
+
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.72rem;
+    color:var(--orange-dark);
+  }
+
+  a{text-decoration:none;color:inherit;}
+
+  img,svg{display:block;max-width:100%;}
+
+  /* ===== corrugated divider strip ===== */
+  .flute{
+    height:14px;
+    width:100%;
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--corrugate-light) 0px, var(--corrugate-light) 2px,
+      transparent 2px, transparent 10px
+    );
+    background-color: var(--corrugate);
+  }
+
+  /* ===== NAV ===== */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-wrap{
+    max-width:1180px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;
+  }
+  .logo{
+    font-family:'Archivo Black',sans-serif;
+    font-size:1.4rem;
+    display:flex;align-items:center;gap:10px;
+  }
+  .logo .mark{
+    width:34px;height:34px;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--cream);font-size:1rem;font-weight:900;
+    transform:rotate(-4deg);
+    border-radius:4px;
+  }
+  nav.links{display:flex;gap:32px;font-weight:600;font-size:0.95rem;}
+  nav.links a{position:relative;padding:4px 0;}
+  nav.links a:after{
+    content:'';position:absolute;left:0;bottom:0;width:0;height:2px;
+    background:var(--orange);transition:width 0.25s ease;
+  }
+  nav.links a:hover:after{width:100%;}
+  .nav-cta{
+    background:var(--corrugate);color:var(--cream);
+    padding:11px 22px;font-weight:700;font-size:0.88rem;
+    border-radius:3px;
+    display:flex;align-items:center;gap:8px;
+    transition:background 0.2s ease, transform 0.2s ease;
+  }
+  .nav-cta:hover{background:var(--orange-dark);transform:translateY(-1px);}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .menu-toggle span{display:block;width:24px;height:2.5px;background:var(--ink);margin:5px 0;}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    max-width:1180px;margin:0 auto;
+    padding:70px 24px 90px;
+    display:grid;grid-template-columns:1.1fr 0.9fr;
+    gap:50px;align-items:center;
+  }
+  .hero-copy .eyebrow{margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .hero-copy .eyebrow::before{
+    content:'';width:28px;height:2px;background:var(--orange);display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    line-height:1.02;
+    color:var(--corrugate);
+    margin-bottom:22px;
+  }
+  .hero h1 span{color:var(--orange);}
+  .hero p.lead{
+    font-size:1.1rem;color:var(--ink-soft);line-height:1.65;
+    max-width:480px;margin-bottom:32px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn-primary{
+    background:var(--orange);color:#fff;
+    padding:15px 28px;font-weight:700;font-size:0.95rem;
+    border-radius:3px;display:inline-flex;align-items:center;gap:10px;
+    box-shadow:0 4px 0 var(--orange-dark);
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-primary:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--orange-dark);}
+  .btn-secondary{
+    border:2px solid var(--corrugate);color:var(--corrugate);
+    padding:13px 26px;font-weight:700;font-size:0.95rem;
+    border-radius:3px;display:inline-flex;align-items:center;gap:10px;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .btn-secondary:hover{background:var(--corrugate);color:var(--cream);}
+
+  .trust-strip{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+  .trust-strip span{font-size:0.82rem;color:var(--ink-soft);font-weight:600;}
+  .trust-strip .brands{display:flex;gap:14px;font-family:'Archivo Expanded';font-weight:700;font-size:0.95rem;color:var(--corrugate);}
+
+  /* hero box illustration */
+  .hero-visual{position:relative;height:440px;}
+  .box-stack{position:absolute;inset:0;}
+
+  /* ===== STATS BAR ===== */
+  .stats-bar{
+    background:var(--corrugate);
+    color:var(--cream);
+  }
+  .stats-inner{
+    max-width:1180px;margin:0 auto;padding:36px 24px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  }
+  .stat .num{
+    font-family:'Archivo Black';font-size:2.1rem;color:var(--orange);
+    line-height:1;
+  }
+  .stat .label{font-size:0.82rem;color:var(--kraft);margin-top:6px;font-weight:500;}
+
+  /* ===== SECTION SHELL ===== */
+  section{padding:90px 24px;}
+  .section-inner{max-width:1180px;margin:0 auto;}
+  .section-head{max-width:600px;margin-bottom:56px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);color:var(--corrugate);line-height:1.08;}
+  .section-head p{color:var(--ink-soft);margin-top:16px;font-size:1.05rem;line-height:1.6;}
+
+  /* ===== PRODUCTS GRID ===== */
+  .products-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .product-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:30px 26px;
+    transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 32px rgba(61,40,23,0.12);
+    border-color:var(--orange);
+  }
+  .product-card .icon-box{
+    width:54px;height:54px;margin-bottom:20px;
+  }
+  .product-card h3{
+    font-size:1.05rem;color:var(--corrugate);margin-bottom:10px;letter-spacing:0;
+  }
+  .product-card p{color:var(--ink-soft);font-size:0.92rem;line-height:1.55;}
+
+  /* ===== WHY US / PROCESS ===== */
+  .why-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  }
+  .why-item{
+    padding:34px 26px;border-right:1px solid var(--line);
+    background:var(--cream);
+  }
+  .why-item:last-child{border-right:none;}
+  .why-item .tag{
+    font-family:'Archivo Black';font-size:1.6rem;color:var(--kraft-dark);
+    margin-bottom:14px;
+  }
+  .why-item h3{font-size:0.98rem;color:var(--corrugate);margin-bottom:8px;letter-spacing:0;}
+  .why-item p{font-size:0.88rem;color:var(--ink-soft);line-height:1.5;}
+
+  /* ===== GALLERY ===== */
+  .gallery-band{background:var(--kraft);}
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .gallery-item{
+    aspect-ratio:1/1;border-radius:6px;
+    background-color:var(--corrugate);
+    display:flex;align-items:flex-end;justify-content:flex-start;
+    position:relative;overflow:hidden;
+  }
+  .gallery-item::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(to top, rgba(61,40,23,0.75) 0%, rgba(61,40,23,0.05) 55%);
+  }
+  .gallery-caption{
+    position:relative;z-index:1;color:var(--cream);font-size:0.88rem;font-weight:700;
+    padding:16px;letter-spacing:0.01em;
+  }
+
+  /* ===== CLIENTS ===== */
+  .clients-row{
+    display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;
+    padding:40px 0;
+  }
+  .client-name{
+    font-family:'Archivo Expanded';font-weight:700;font-size:1.3rem;
+    color:var(--ink-soft);opacity:0.65;letter-spacing:0.02em;
+    transition:opacity 0.2s ease;
+  }
+  .client-name:hover{opacity:1;color:var(--corrugate);}
+
+  /* ===== QUOTE FORM ===== */
+  .quote-section{background:var(--corrugate);color:var(--cream);position:relative;}
+  .quote-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:start;}
+  .quote-section .section-head h2{color:var(--cream);}
+  .quote-section .section-head p{color:var(--kraft);}
+  .quote-perks{margin-top:30px;display:flex;flex-direction:column;gap:18px;}
+  .perk{display:flex;gap:14px;align-items:flex-start;}
+  .perk .dot{
+    width:8px;height:8px;background:var(--orange);border-radius:50%;margin-top:7px;flex-shrink:0;
+  }
+  .perk-text strong{display:block;font-size:0.98rem;margin-bottom:3px;}
+  .perk-text span{font-size:0.88rem;color:var(--kraft);}
+
+  form.quote-form{
+    background:var(--cream);border-radius:8px;padding:36px;
+    display:grid;grid-template-columns:1fr 1fr;gap:18px;
+  }
+  form.quote-form .full{grid-column:1/-1;}
+  .field label{
+    display:block;font-size:0.8rem;font-weight:700;color:var(--corrugate);
+    margin-bottom:7px;text-transform:uppercase;letter-spacing:0.04em;
+  }
+  .field input,.field select,.field textarea{
+    width:100%;padding:13px 14px;border:1.5px solid var(--line);
+    border-radius:4px;font-family:'Inter';font-size:0.95rem;color:var(--ink);
+    background:#fff;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--orange);
+  }
+  .field textarea{resize:vertical;min-height:90px;}
+  .submit-btn{
+    background:var(--orange);color:#fff;border:none;
+    padding:16px;font-weight:700;font-size:1rem;border-radius:4px;
+    cursor:pointer;box-shadow:0 4px 0 var(--orange-dark);
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+    font-family:'Inter';
+  }
+  .submit-btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--orange-dark);}
+  .form-note{font-size:0.8rem;color:var(--ink-soft);margin-top:4px;}
+  .form-success{
+    display:none;background:#E8F5E9;border:1.5px solid #4CAF50;color:#2E7D32;
+    padding:16px;border-radius:4px;font-weight:600;font-size:0.92rem;text-align:center;
+  }
+
+  /* ===== CONTACT STRIP ===== */
+  .contact-section{}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .contact-card{
+    border:1px solid var(--line);border-radius:8px;padding:32px 26px;
+    text-align:left;
+  }
+  .contact-card .ic{
+    width:44px;height:44px;background:var(--kraft);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  }
+  .contact-card h3{font-size:1rem;color:var(--corrugate);margin-bottom:8px;letter-spacing:0;}
+  .contact-card p, .contact-card a{font-size:0.92rem;color:var(--ink-soft);line-height:1.5;}
+  .contact-card .highlight{color:var(--orange-dark);font-weight:700;}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--corrugate);color:var(--kraft);padding:50px 24px 30px;}
+  .footer-inner{max-width:1180px;margin:0 auto;}
+  .footer-top{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    flex-wrap:wrap;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(250,246,239,0.15);
+  }
+  footer .logo{color:var(--cream);}
+  .footer-links{display:flex;gap:40px;flex-wrap:wrap;}
+  .footer-links h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:14px;color:var(--orange);}
+  .footer-links a{display:block;font-size:0.9rem;margin-bottom:10px;color:var(--kraft);opacity:0.85;}
+  .footer-links a:hover{opacity:1;color:#fff;}
+  .footer-bottom{
+    padding-top:22px;display:flex;justify-content:space-between;
+    font-size:0.82rem;color:var(--kraft);opacity:0.65;flex-wrap:wrap;gap:10px;
+  }
+
+  /* ===== WHATSAPP FLOAT ===== */
+  .wa-float{
+    position:fixed;bottom:24px;right:24px;z-index:200;
+    width:58px;height:58px;background:#25D366;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
+    transition:transform 0.2s ease;
+  }
+  .wa-float:hover{transform:scale(1.08);}
+
+  /* ===== REVEAL ANIMATION ===== */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease, transform 0.7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    *{scroll-behavior:auto !important;}
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:980px){
+    .hero{grid-template-columns:1fr;padding-top:40px;}
+    .hero-visual{height:300px;order:-1;}
+    .products-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .why-item{border-right:1px solid var(--line);}
+    .why-item:nth-child(2n){border-right:none;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .quote-grid{grid-template-columns:1fr;gap:36px;}
+    .contact-grid{grid-template-columns:1fr;}
+    .stats-inner{grid-template-columns:repeat(2,1fr);gap:30px;}
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+  }
+
+  @media (max-width:600px){
+    .nav-cta span.txt{display:none;}
+    .hero{padding:30px 18px 60px;}
+    .hero h1{font-size:2.1rem;}
+    section{padding:60px 18px;}
+    .products-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .why-item{border-right:none;border-bottom:1px solid var(--line);}
+    .why-item:last-child{border-bottom:none;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+    form.quote-form{grid-template-columns:1fr;padding:24px;}
+    .footer-top{flex-direction:column;}
+    .footer-bottom{flex-direction:column;}
+    .clients-row{gap:30px;}
+    .client-name{font-size:1rem;}
+  }
+
+  /* mobile nav drawer */
+  .mobile-drawer{
+    display:none;position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;
+    background:var(--cream);z-index:300;box-shadow:-8px 0 30px rgba(0,0,0,0.15);
+    padding:90px 30px 30px;flex-direction:column;gap:24px;
+    transform:translateX(100%);transition:transform 0.3s ease;
+  }
+  .mobile-drawer.open{display:flex;transform:translateX(0);}
+  .mobile-drawer a{font-weight:700;font-size:1.1rem;color:var(--corrugate);}
+  .drawer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:290;}
+  .drawer-overlay.open{display:block;}
+  .drawer-close{position:absolute;top:24px;right:24px;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--corrugate);}
+
+  :focus-visible{outline:3px solid var(--orange);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="nav-wrap">
+    <a href="#top" class="logo">
+      <span class="mark">Z&S</span>
+      Z&amp;S Packages
+    </a>
+    <nav class="links">
+      <a href="#products">Products</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#gallery">Work</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#quote" class="nav-cta">
+      <span class="txt">Get a Quote</span>
+      <span>→</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="flute"></div>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<nav class="mobile-drawer" id="mobileDrawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+  <a href="#products">Products</a>
+  <a href="#why-us">Why Us</a>
+  <a href="#gallery">Work</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+  <a href="#quote" class="nav-cta" style="text-align:center;">Get a Quote</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<div id="top"></div>
+<section class="hero" style="padding-top:70px;">
+  <div class="hero-copy">
+    <div class="eyebrow">Carton Box Manufacturer · Pakistan</div>
+    <h1>We Pack What<br>Pakistan's <span>Top Brands</span><br>Ship.</h1>
+    <p class="lead">Z&amp;S Packages designs and manufactures every kind of carton box — plain, custom-printed, die-cut, and specialty packaging — built to protect your product and carry your brand.</p>
+    <div class="hero-actions">
+      <a href="#quote" class="btn-primary">Request a Quote <span>→</span></a>
+      <a href="#products" class="btn-secondary">See Our Boxes</a>
+    </div>
+    <div class="trust-strip">
+      <span>TRUSTED BY:</span>
+      <div class="brands"><span>Sana Safinaz</span><span>·</span><span>Caltex</span></div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <svg class="box-stack" viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg">
+      <!-- back box -->
+      <g transform="translate(60,40) rotate(-6)">
+        <rect x="0" y="40" width="220" height="170" fill="#5A3D26"/>
+        <polygon points="0,40 40,0 260,0 220,40" fill="#6B4A2F"/>
+        <polygon points="220,40 260,0 260,170 220,210" fill="#3D2817"/>
+        <line x1="0" y1="100" x2="220" y2="100" stroke="#3D2817" stroke-width="2" opacity="0.5"/>
+      </g>
+      <!-- front main box -->
+      <g transform="translate(110,150)">
+        <rect x="0" y="50" width="260" height="200" fill="#D4622A"/>
+        <polygon points="0,50 45,0 305,0 260,50" fill="#E07A45"/>
+        <polygon points="260,50 305,0 305,200 260,250" fill="#B84E1C"/>
+        <!-- tape -->
+        <rect x="0" y="120" width="260" height="26" fill="#E8D9C3" opacity="0.92"/>
+        <rect x="115" y="0" width="30" height="250" fill="#E8D9C3" opacity="0.5"/>
+        <!-- flap lines -->
+        <line x1="20" y1="50" x2="45" y2="10" stroke="#B84E1C" stroke-width="2" opacity="0.6"/>
+        <line x1="240" y1="50" x2="265" y2="10" stroke="#B84E1C" stroke-width="2" opacity="0.6"/>
+        <text x="130" y="195" font-family="Archivo Black" font-size="22" fill="#FAF6EF" text-anchor="middle" opacity="0.9">Z&amp;S</text>
+      </g>
+      <!-- small box -->
+      <g transform="translate(330,260) rotate(8)">
+        <rect x="0" y="25" width="110" height="90" fill="#E8D9C3"/>
+        <polygon points="0,25 20,0 130,0 110,25" fill="#F2E8D5"/>
+        <polygon points="110,25 130,0 130,90 110,115" fill="#D4C2A3"/>
+        <line x1="0" y1="65" x2="110" y2="65" stroke="#D4622A" stroke-width="4"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat reveal"><div class="num">10+</div><div class="label">Years Manufacturing</div></div>
+    <div class="stat reveal"><div class="num">500+</div><div class="label">Box Designs Delivered</div></div>
+    <div class="stat reveal"><div class="num">4+</div><div class="label">National Brand Clients</div></div>
+    <div class="stat reveal"><div class="num">24/7</div><div class="label">Order Support</div></div>
+  </div>
+</div>
+
+<!-- ============ PRODUCTS ============ -->
+<section id="products">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Make</div>
+      <h2>Every Box Your Business Needs</h2>
+      <p>From simple shipping cartons to fully branded retail packaging — we manufacture all types of corrugated and printed boxes in-house.</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <svg class="icon-box" viewBox="0 0 54 54"><rect x="6" y="18" width="42" height="30" rx="2" fill="#E8D9C3" stroke="#D4622A" stroke-width="2"/><polygon points="6,18 16,6 48,6 38,18" fill="#F2E8D5" stroke="#D4622A" stroke-width="2"/><line x1="6" y1="30" x2="48" y2="30" stroke="#D4622A" stroke-width="1.5"/></svg>
+        <h3>Plain Corrugated Boxes</h3>
+        <p>Strong, cost-effective shipping cartons in any size — built for daily bulk dispatch and warehousing.</p>
+      </div>
+      <div class="product-card reveal">
+        <svg class="icon-box" viewBox="0 0 54 54"><rect x="6" y="18" width="42" height="30" rx="2" fill="#D4622A"/><polygon points="6,18 16,6 48,6 38,18" fill="#E07A45"/><text x="27" y="38" font-family="Archivo Black" font-size="11" fill="#FAF6EF" text-anchor="middle">LOGO</text></svg>
+        <h3>Custom Printed Boxes</h3>
+        <p>Full-color branded packaging with your logo, design, and product details — made to elevate your brand on every shelf.</p>
+      </div>
+      <div class="product-card reveal">
+        <svg class="icon-box" viewBox="0 0 54 54"><polygon points="27,4 50,16 50,40 27,52 4,40 4,16" fill="#3D2817"/><polygon points="27,4 50,16 27,28 4,16" fill="#5A3D26"/></svg>
+        <h3>Die-Cut &amp; Custom Shape</h3>
+        <p>Precision die-cut boxes for unique product shapes — mailers, sleeves, inserts, and display-ready cartons.</p>
+      </div>
+      <div class="product-card reveal">
+        <svg class="icon-box" viewBox="0 0 54 54"><rect x="8" y="20" width="38" height="26" rx="2" fill="#E8D9C3" stroke="#3D2817" stroke-width="2"/><rect x="20" y="8" width="14" height="14" fill="#D4622A"/></svg>
+        <h3>Mailer &amp; E-commerce Boxes</h3>
+        <p>Self-locking mailer boxes built for online sellers — easy to pack, ship, and unbox with confidence.</p>
+      </div>
+      <div class="product-card reveal">
+        <svg class="icon-box" viewBox="0 0 54 54"><rect x="10" y="14" width="34" height="34" rx="3" fill="#D4C2A3"/><circle cx="27" cy="31" r="9" fill="#FAF6EF" stroke="#D4622A" stroke-width="2"/></svg>
+        <h3>Food-Grade Packaging</h3>
+        <p>Safe, durable cartons for food and consumables — meeting hygiene and transport standards.</p>
+      </div>
+      <div class="product-card reveal">
+        <svg class="icon-box" viewBox="0 0 54 54"><rect x="6" y="10" width="20" height="34" rx="2" fill="#5A3D26"/><rect x="29" y="10" width="20" height="34" rx="2" fill="#D4622A"/></svg>
+        <h3>Industrial &amp; Heavy-Duty</h3>
+        <p>Reinforced multi-layer cartons for heavy goods, machinery parts, and export-grade shipping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flute"></div>
+
+<!-- ============ WHY US ============ -->
+<section id="why-us" style="background:var(--kraft);">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why Z&amp;S Packages</div>
+      <h2>Built On Trust, Delivered On Time</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <div class="tag">01</div>
+        <h3>Brand-Grade Quality</h3>
+        <p>The same quality standard we hold for national brands applies to every order, big or small.</p>
+      </div>
+      <div class="why-item">
+        <div class="tag">02</div>
+        <h3>Any Order Size</h3>
+        <p>From a single custom batch to factory-scale bulk runs — we scale production to your need.</p>
+      </div>
+      <div class="why-item">
+        <div class="tag">03</div>
+        <h3>Fast Turnaround</h3>
+        <p>Clear production timelines and reliable delivery, so your supply chain never waits on us.</p>
+      </div>
+      <div class="why-item">
+        <div class="tag">04</div>
+        <h3>Direct Factory Pricing</h3>
+        <p>No middlemen — you deal directly with the manufacturer for the best possible rate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="gallery-band">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our Work</div>
+      <h2>A Look Inside Our Production</h2>
+      <p>Photos from our factory floor and recent orders. Replace these placeholders with your own product photos.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item" style="background-image:url('https://images.openai.com/static-rsc-4/r7sweODRmaVmARHJAqKNimNpXqmeqc1EEOwjV2ixF4ufo7SbWK7kurDT478q8NLe2UDrn-NfO6eiTTsKLalyjlevUbWSYEzf0ONmuFc8JagKS7flOWUrE4Sq5DdRaP-OLRmd_FhfKYOgNjXzJGylMO_s_Y9UUi-yM4oZMzHfrPSDTMb6TZAZiFxErWUVX5y8?purpose=fullsize');background-size:cover;background-position:center;">
+        <span class="gallery-caption">Factory Floor</span>
+      </div>
+      <div class="gallery-item" style="background-image:url('image1.jpg');background-size:cover;background-position:center;">
+        <span class="gallery-caption">Printed Boxes</span>
+      </div>
+      <div class="gallery-item" style="background-image:url('https://images.openai.com/static-rsc-4/azkeDOaN2sRHzcg4781yeOi7K-6i2Fl72OS8vPQSAQi0ohh8pkehxz3cODyUokMn5D3yb6qOSsUJPdxUaK_B61gVvKtTqSQUC-vecrput_A0HB55-GE8WQCzhfhApl5bqLMF6fpicApnwQGPhLoeAl0QL8sELrWXx7TtGwYJ4pYmqBgqlO0VDeUxBPUPwKp1?purpose=fullsize');background-size:cover;background-position:center;">
+        <span class="gallery-caption">Bulk Stock</span>
+      </div>
+      <div class="gallery-item" style="background-image:url('https://images.openai.com/static-rsc-4/ws3dHRbAUzR_tbvHHQZtWV-mhLVg0e2AhRZQH0pkLBjt_cDAYtboyC92qLAFayfJCGvCFaRB8o13TcQHo_DlduH0-90txvS2fuDiyYBc8F2T8EZvFl8LG343zMHJl0kkUjMDeMOyGnQ9lKRRpJtceZNfXeAJWlnUwsVpiDokmUR7Wa9EArZlMEv9TxqHhJbB?purpose=fullsize');background-size:cover;background-position:center;">
+        <span class="gallery-caption">Finished Order</span>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:20px;font-size:0.85rem;color:var(--ink-soft);">📦 High-quality packaging solutions designed to protect your products and elevate your brand.</p>
+  </div>
+</section>
+
+<!-- ============ CLIENTS ============ -->
+<section id="clients">
+  <div class="section-inner">
+    <div class="section-head reveal" style="margin-bottom:10px;">
+      <div class="eyebrow">Trusted By</div>
+      <h2>Brands That Ship With Z&amp;S</h2>
+    </div>
+    <div class="clients-row reveal">
+      <span class="client-name">SANA SAFINAZ</span>
+      <span class="client-name">CALTEX</span>
+      <span class="client-name" style="opacity:0.35;">YOUR BRAND NEXT</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE FORM ============ -->
+<section id="quote" class="quote-section">
+  <div class="section-inner">
+    <div class="quote-grid">
+      <div class="reveal">
+        <div class="section-head" style="margin-bottom:0;">
+          <div class="eyebrow" style="color:var(--orange);">Request A Quote</div>
+          <h2>Tell Us What You Need to Pack</h2>
+          <p>Share your box requirements and our team will get back to you with pricing and timelines.</p>
+        </div>
+        <div class="quote-perks">
+          <div class="perk"><span class="dot"></span><div class="perk-text"><strong>Quick response</strong><span>We typically reply within 24 hours.</span></div></div>
+          <div class="perk"><span class="dot"></span><div class="perk-text"><strong>No order too big or small</strong><span>Sample runs to factory-scale bulk orders.</span></div></div>
+          <div class="perk"><span class="dot"></span><div class="perk-text"><strong>Free design consultation</strong><span>We help you choose size, material, and print finish.</span></div></div>
+        </div>
+      </div>
+
+      <form class="quote-form reveal" id="quoteForm">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="phone">Phone / WhatsApp</label>
+          <input type="tel" id="phone" required placeholder="03XX-XXXXXXX">
+        </div>
+        <div class="field full">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" placeholder="Your business name">
+        </div>
+        <div class="field">
+          <label for="boxtype">Box Type</label>
+          <select id="boxtype">
+            <option>Plain Corrugated</option>
+            <option>Custom Printed</option>
+            <option>Die-Cut / Custom Shape</option>
+            <option>Mailer / E-commerce</option>
+            <option>Food-Grade</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="quantity">Estimated Quantity</label>
+          <input type="text" id="quantity" placeholder="e.g. 5,000 units">
+        </div>
+        <div class="field full">
+          <label for="details">Order Details</label>
+          <textarea id="details" placeholder="Box size, material, printing requirement, deadline, etc."></textarea>
+        </div>
+        <div class="field full">
+          <button type="submit" class="submit-btn">Send Quote Request →</button>
+          <p class="form-note">By submitting, our team will contact you directly via phone or WhatsApp.</p>
+          <div class="form-success" id="formSuccess">✓ Your email app is opening with your request filled in — just hit Send to complete it.</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Talk To Us Directly</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h2.28a1 1 0 01.97.76l1.06 4.24a1 1 0 01-.27.95l-1.6 1.6a14 14 0 006.3 6.3l1.6-1.6a1 1 0 01.95-.27l4.24 1.06a1 1 0 01.76.97V21a2 2 0 01-2 2h-1C9.4 23 1 14.6 1 4V3a2 2 0 012-2z" fill="#3D2817"/></svg>
+        </div>
+        <h3>Call / WhatsApp</h3>
+        <p class="highlight">+92 3122182361</p>
+        <p style="margin-top:4px;">Connect with us instantly for quotations, orders, and support.</p>
+      </div>
+      <div class="contact-card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="#3D2817" stroke-width="2" fill="none"/></svg>
+        </div>
+        <h3>Email Us</h3>
+        <p><a href="mailto:zandspackging@gmail.com">zandspackging@gmail.com</a></p>
+        <p style="margin-top:4px;">We respond to all inquiries within one business day.</p>
+      </div>
+      <div class="contact-card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1118 0z" stroke="#3D2817" stroke-width="2" fill="none"/><circle cx="12" cy="10" r="3" stroke="#3D2817" stroke-width="2"/></svg>
+        </div>
+        <h3>Visit Our Factory</h3>
+        <p> Karachi , Pakistan</p>
+        <p style="margin-top:4px;">Azizabad Block 2 Bhagoriya Goat Plot Number WS 50</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:14px;display:inline-flex;">
+          <span class="mark">Z&S</span> Z&amp;S Packages
+        </a>
+        <p style="max-width:280px;font-size:0.88rem;opacity:0.75;margin-top:10px;">Manufacturing every type of carton box for Pakistan's leading brands and businesses.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Navigate</h4>
+          <a href="#products">Products</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#gallery">Our Work</a>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <a href="#quote">Request Quote</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Z&amp;S Packages. All rights reserved.</span>
+      <span>Pakistan's Trusted Carton Box Manufacturer</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a class="wa-float" href="https://wa.me/923000000000?text=Hi%2C%20I%20want%20to%20order%20carton%20boxes" target="_blank" aria-label="Chat on WhatsApp" title="Update phone number in code: wa.me/923XXXXXXXXX">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.7-.7-1.3-1.5-1.7-2.4-.1-.3 0-.4.1-.6.2-.2.8-.7 1.1-.9.2-.2.2-.4.1-.7-.1-.3-.8-1.7-.9-2-.1-.3-.3-.3-.5-.3h-.5c-.3 0-.7.2-.9.4-.7.7-1.1 1.5-1.1 2.5 0 2.5 2.4 5.9 4.9 7.4 2.5 1.5 5.2 1.7 6.6.3.4-.4.7-.9.7-1.5 0-.2 0-.4-.3-.5z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.6 3.6 13.3 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.2-8.4 8.2z"/></svg>
+</a>
+
+<script>
+  // mobile drawer
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+  document.getElementById('menuToggle').addEventListener('click', ()=>{
+    drawer.classList.add('open'); overlay.classList.add('open');
+  });
+  document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeDrawer));
+  function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('open'); }
+
+  // scroll reveal
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  },{threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  // form handling - opens email app with all data pre-filled
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const company = document.getElementById('company').value || 'Not provided';
+    const boxtype = document.getElementById('boxtype').value;
+    const quantity = document.getElementById('quantity').value || 'Not specified';
+    const details = document.getElementById('details').value || 'None';
+
+    const subject = `Quote Request from ${name} - Z&S Packages`;
+    const body =
+`New Quote Request:
+
+Name: ${name}
+Phone/WhatsApp: ${phone}
+Company: ${company}
+Box Type: ${boxtype}
+Estimated Quantity: ${quantity}
+
+Order Details:
+${details}`;
+
+    const mailtoLink = `mailto:zandspackging@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+
+    document.getElementById('formSuccess').style.display='block';
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
